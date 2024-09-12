@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "KingsNet",
 	"version": "1.0",
-	"description": "Redirect from one page to another with a toggle.",
+	"description": "Crannet but with old assignment center",
 	"permissions": [
 	  "storage",
 	  "declarativeNetRequest",
