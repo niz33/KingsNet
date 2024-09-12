@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "priority": 1,
+      "action": {
+        "type": "redirect",
+        "redirect": {
+          "url": "https://cranbrook.myschoolapp.com/app/student#studentmyday/assignment-center"
+        }
+      },
+      "condition": {
+        "urlFilter": "https://cranbrook.myschoolapp.com/lms-assignment/assignment-center/student",
+        "resourceTypes": ["main_frame"]
+      }
+    }
+  ]
+  
