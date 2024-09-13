@@ -4,27 +4,37 @@
 	"version": "1.0",
 	"description": "Crannet but with old assignment center",
 	"permissions": [
-	  "storage",
-	  "declarativeNetRequest",
-	  "activeTab"
+		"storage",
+		"declarativeNetRequest",
+		"activeTab",
+		"scripting"
 	],
 	"background": {
-	  "service_worker": "js/background.js"
+		"service_worker": "js/background.js"
 	},
 	"host_permissions": [
-	  "*://cranbrook.myschoolapp.com/*"
+		"*://cranbrook.myschoolapp.com/*"
 	],
 	"action": {
-	  "default_popup": "popup.html"
+		"default_popup": "popup.html"
 	},
 	"declarative_net_request": {
-	  "rule_resources": [
+		"rule_resources": [
+			{
+				"id": "ruleset_1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	},
+	"content_scripts": [
 		{
-		  "id": "ruleset_1",
-		  "enabled": true,
-		  "path": "rules.json"
+			"matches": [
+				"*://cranbrook.myschoolapp.com/*"
+			],
+			"js": [
+				"js/content.js"
+			]
 		}
-	  ]
-	}
-  }
-  
+	]
+}
